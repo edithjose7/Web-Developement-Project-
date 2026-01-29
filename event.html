@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Justice world Tour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+        }
+
+        header, main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 16px auto;
+        }
+
+        .media-section, .form-section {
+            background-color: #fff;
+            padding: 16px;
+            margin-top: 16px;
+            border-radius: 8px;
+        }
+
+        video, audio {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            header, main {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Book your Tickets NOW!!</h1>
+    <!-- TC02: Banner image with alt text -->
+    <img src="C:\Users\edith miriam\Desktop\Web Developement Project\media\poster3jb.jpg" alt="Event Banner - Tech Innovators Conference 2025">
+</header>
+
+<main>
+    <!-- Media Section: Image, Video, Audio -->
+    <section class="media-section">
+        <h2>JUSTICE THE WORLD TOUR</h2>
+
+        <!-- TC03: Promotional video with controls -->
+        <h3>Concert Glimpse </h3>
+        <video controls>
+            <source src="C:\Users\edith miriam\Desktop\Web Developement Project\media\videojb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- TC04: Background / Intro audio with controls -->
+        <h3>Track mashup</h3>
+        <audio controls>
+            <source src="C:\Users\edith miriam\Desktop\Web Developement Project\media\audiojb.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <h2>Concert Registration Form</h2>
+        <!-- TC05–TC09 covered by this form -->
+        <form action="#" method="post">
+            <!-- Name: text input -->
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Email: email input with validation -->
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Date: event date or DOB -->
+            <div class="form-group">
+                <label for="eventDate">Preferred Event Date *</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+            </div>
+
+            <!-- Radio buttons: session selection -->
+            <div class="form-group">
+                <label>Session Preference *</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="session" value="morning" required>
+                        Morning
+                    </label>
+                    <label>
+                        <input type="radio" name="session" value="afternoon">
+                        Afternoon
+                    </label>
+                    <label>
+                        <input type="radio" name="session" value="evening">
+                        Evening
+                    </label>
+                </div>
+            </div>
+
+            <!-- Dropdown: ticket type -->
+            <div class="form-group">
+                <label for="ticketType">Ticket Type *</label>
+                <select id="ticketType" name="ticketType" required>
+                    <option value="">-- Select Ticket Type --</option>
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                    <option value="vip">VIP</option>
+                </select>
+            </div>
+
+            <!-- Textarea: comments -->
+            <div class="form-group">
+                <label for="comments">Comments / Special Requirements</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter any special requests here..."></textarea>
+            </div>
+
+            <!-- File upload: ID proof / photo -->
+            <div class="form-group">
+                <label for="attachment">Upload ID Proof / Photo (image/PDF)</label>
+                <input type="file" id="attachment" name="attachment" accept=".jpg,.jpeg,.png,.pdf">
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
